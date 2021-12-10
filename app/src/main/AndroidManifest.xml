@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dwikyv.sigpertanian">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ab_logo2"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/ab_logo2"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity android:name=".ForgetPasswordActivity"></activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDHHYvu-B5LvGvrldPBnZtcM4xhi4gIB2k" />
+
+        <activity android:name=".MapActivity" />
+        <activity android:name=".RegisterActivity" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".UbahKomoditasActivity"
+            android:parentActivityName=".DataKomoditas" />
+        <activity
+            android:name=".TambahKomoditasActivity"
+            android:parentActivityName=".DataKomoditas" />
+        <activity android:name=".UbahLahanActivity"
+            android:parentActivityName=".DataLahan"/>
+        <activity android:name=".TambahLahanActivity"
+            android:parentActivityName=".DataLahan"/>
+        <activity android:name=".DataKomoditas" />
+        <activity android:name=".DataLahan" />
+        <activity android:name=".AboutUs" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

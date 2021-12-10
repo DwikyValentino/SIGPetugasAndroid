@@ -1,0 +1,57 @@
+package com.dwikyv.sigpertanian;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+
+import com.dwikyv.sigpertanian.Model.login.LoginData;
+
+import java.util.HashMap;
+
+import static android.os.Build.ID;
+
+public class SessionManager {
+
+    private Context _context;
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
+
+    public static final String IS_LOGGED_IN = "isLoggedIn";
+    public static final String ID = "id";
+    public static final String USERNAME = "username";
+    public static final String FULLNAME = "fullname";
+    public static final String EMAIL = "email";
+
+    public SessionManager (Context context){
+        this._context = context;
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        editor = sharedPreferences.edit();
+    }
+
+    public void createLoginSession(LoginData user){
+        editor.putBoolean(IS_LOGGED_IN, true);
+//        editor.putString(ID, user.getId());
+//        editor.putString(USERNAME, user.getUsername());
+//        editor.putString(FULLNAME, user.getFullname());
+//        editor.putString(EMAIL, user.getEmail());
+        editor.commit();
+    }
+
+    public HashMap<String,String> getUserDetail(){
+        HashMap<String,String> user = new HashMap<>();
+        user.put(ID, sharedPreferences.getString(ID, null));
+        user.put(USERNAME, sharedPreferences.getString(USERNAME, null));
+        user.put(FULLNAME, sharedPreferences.getString(FULLNAME, null));
+        user.put(EMAIL, sharedPreferences.getString(EMAIL, null));
+        return user;
+    }
+
+    public void logoutSession(){
+        editor.clear();
+        editor.commit();
+    }
+
+    public boolean isLoggedIn(){
+        return sharedPreferences.getBoolean(IS_LOGGED_IN, false);
+    }
+}

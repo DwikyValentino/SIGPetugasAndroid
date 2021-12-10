@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="6dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_id_komoditas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID Komoditas"
+            />
+        
+        <TextView
+            android:id="@+id/tv_namakomoditas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Komoditas"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tv_jumlah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jumlah"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_awal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Awal Tanggal"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_akhir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Akhir Tanggal"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_desa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desa"
+            android:textSize="18sp"
+            android:maxLines="2"
+            />
+
+        <TextView
+            android:id="@+id/tv_kecamatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kecamatan"
+            android:textSize="18sp"
+            android:maxLines="2"
+            />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
